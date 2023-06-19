@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="#" />
+
+    <!-- facebook plugin -->
+    <!-- Messenger ปลั๊กอินแชท Code -->
+   <!-- Messenger ปลั๊กอินแชท Code -->
+   <div id="fb-root"></div>
+
+   <!-- Your ปลั๊กอินแชท code -->
+   <div id="fb-customer-chat" class="fb-customerchat">
+   </div>
+
+   <script>
+     var chatbox = document.getElementById('fb-customer-chat');
+     chatbox.setAttribute("page_id", "102047299140283");
+     chatbox.setAttribute("attribution", "biz_inbox");
+   </script>
+
+   <!-- Your SDK code -->
+   <script>
+     window.fbAsyncInit = function() {
+       FB.init({
+         xfbml            : true,
+         version          : 'v15.0'
+       });
+     };
+
+     (function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+   </script>
+     <!-- end facebook chat plugin -->
+    
+
+
+
+</head>
+
+
+<body>
+<h1> Hello world from ejs file</h1>
+
+
+
+</body>
+</html>

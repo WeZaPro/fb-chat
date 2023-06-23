@@ -94,27 +94,21 @@ function handleMessage(sender_psid, received_message) {
     };
 
     callSendAPI2(sender_psid, response);
-    //callSendAPI(sender_psid, received_message.text);
     callSendAPIWithTemplate(sender_psid);
-    //callSendAPIWithTemplate2(sender_psid);
   } else if (received_message.text === "2") {
     response = {
       text: `You sent the message: 0000-2 !`,
     };
 
     callSendAPI2(sender_psid, response);
-    //callSendAPI(sender_psid, received_message.text);
     callSendAPIWithTemplate(sender_psid);
-    //callSendAPIWithTemplate2(sender_psid);
-  } else {
+  } else if (received_message.text === "สอบถาม") {
     response = {
-      text: `You sent the message: ${received_message.text} กรุณาเลือกเมนูด้วยครับ !`,
+      text: `You sent the message: ${received_message.text} กรุณา !`,
     };
 
-    callSendAPI2(sender_psid, response);
-    //callSendAPI(sender_psid, received_message.text);
-    //callSendAPIWithTemplate(sender_psid);
-    callSendAPIWithTemplate2(sender_psid);
+    // callSendAPI2(sender_psid, response);
+    // callSendAPIWithTemplate2(sender_psid);
   }
 }
 

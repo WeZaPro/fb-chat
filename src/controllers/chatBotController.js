@@ -87,6 +87,7 @@ let getWebhook = (req, res) => {
 function handleMessage(sender_psid, received_message) {
   let response;
   console.log("received_message.text >>>>> ", received_message.text);
+  console.log("sender_psid >>>>> ", sender_psid);
   if (received_message.text === "1") {
     response = {
       text: `You sent the message: 0000-1 !`,

@@ -104,7 +104,7 @@ function handleMessage(sender_psid, received_message) {
     callSendAPIWithTemplate(sender_psid);
   } else if (received_message.text === "สอบถาม") {
     response = {
-      text: `You sent the message: ${received_message.text} กรุณา !`,
+      text: `กรุณารอสักครู่ครับ`,
     };
 
     // callSendAPI2(sender_psid, response);

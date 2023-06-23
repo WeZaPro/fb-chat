@@ -102,6 +102,13 @@ function handleMessage(sender_psid, received_message) {
 
     callSendAPI2(sender_psid, response);
     callSendAPIWithTemplate(sender_psid);
+  } else if (received_message.text === "3") {
+    response = {
+      text: `You sent the message: 0000-3 !`,
+    };
+
+    callSendAPI2(sender_psid, response);
+    callSendAPIWithTemplate(sender_psid);
   } else if (received_message.text === `HI`) {
     response = {
       text: `กรุณารอสักครู่ครับ`,

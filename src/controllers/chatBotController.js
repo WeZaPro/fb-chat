@@ -109,13 +109,16 @@ function handleMessage(sender_psid, received_message) {
 
     callSendAPI2(sender_psid, response);
     callSendAPIWithTemplate(sender_psid);
+  } else if (received_message.text === `A`) {
+    response = {
+      text: `กรุณารอสักครู่ครับ(A)`,
+    };
+    callSendAPI2(sender_psid, response);
   } else if (received_message.text === `HI`) {
     response = {
-      text: `กรุณารอสักครู่ครับ`,
+      text: `กรุณารอสักครู่ครับ(HI)`,
     };
-
-    // callSendAPI2(sender_psid, response);
-    // callSendAPIWithTemplate2(sender_psid);
+    callSendAPI2(sender_psid, response);
   }
 }
 
